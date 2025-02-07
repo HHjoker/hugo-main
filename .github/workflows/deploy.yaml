@@ -4,7 +4,7 @@ name: deploy
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
@@ -18,7 +18,7 @@ jobs:
         - name: Setup Hugo
           uses: peaceiris/actions-hugo@v3
           with:
-              hugo-version: "latest"
+              hugo-version: "0.143.1"
               extended: true
 
         - name: Build Web
