@@ -6,3 +6,6 @@ title = 'Cpp'
 +++
 
 # Cpp Note
+
+## GTest 使用方法
+
