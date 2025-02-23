@@ -7,5 +7,15 @@ title = 'Cpp'
 
 # Cpp Note
 
+## CMake 使用方法
+
+### 打印详细信息
+
+``` she
+make VERBOSE=1
+```
+
+
+
 ## GTest 使用方法
 
