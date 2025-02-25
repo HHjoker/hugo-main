@@ -19,3 +19,16 @@ make VERBOSE=1
 
 ## GTest 使用方法
 
+### GMock
+
+#### MOCK_METHOD
+
+MOCK_METHOD#1(#2,#3(#4))
+
+- #1：要mock的方法共有几个参数
+- #2：要mock的方法名称
+- #3:这个方法的返回值类型
+- #4:这个方法的具体参数
+
+![MOCK_METHOD](./picture/gmock_MOCK_METHOD.png)
+
