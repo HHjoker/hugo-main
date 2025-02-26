@@ -30,5 +30,5 @@ MOCK_METHOD#1(#2,#3(#4))
 - #3:这个方法的返回值类型
 - #4:这个方法的具体参数
 
-![MOCK_METHOD](./picture/gmock_MOCK_METHOD.png)
+![MOCK_METHOD](./gmock_MOCK_METHOD.png)
 
