@@ -29,7 +29,7 @@ make VERBOSE=1
 
 模拟对象是预先编程的对象，这些对象构成了它们预期接收调用的规范
 
-![什么是mock](what_is_mock.png)
+![what is mock](what_is_mock.jpg)
 
 ### 原始接口
 

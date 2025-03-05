@@ -20,7 +20,14 @@ jobs:
           with:
               hugo-version: "0.143.1"
               extended: true
+        - name: Git Configuration
+          run: |
+            git config --global core.quotePath false
+            git config --global core.autocrlf false
+            git config --global core.safecrlf true
+            git config --global core.ignorecase false          
 
+	
         - name: Build Web
           run: hugo -D
 
