@@ -1,6 +1,6 @@
 name: deploy
 
-# 代码提交到main分支时触发github action
+# 代码提交到 master 分支时触发 GitHub Action
 on:
   push:
     branches:
@@ -20,23 +20,22 @@ jobs:
           with:
               hugo-version: "0.143.1"
               extended: true
+
         - name: Git Configuration
           run: |
             git config --global core.quotePath false
             git config --global core.autocrlf false
             git config --global core.safecrlf true
-            git config --global core.ignorecase false          
+            git config --global core.ignorecase false
 
-	
         - name: Build Web
           run: hugo -D
 
         - name: Deploy Web
           uses: peaceiris/actions-gh-pages@v4
           with:
-              PERSONAL_TOKEN: ${{ secrets.TOKEN}}
+              PERSONAL_TOKEN: ${{ secrets.TOKEN }}
               EXTERNAL_REPOSITORY: HHjoker/HHjoker.github.io
               PUBLISH_BRANCH: master
               PUBLISH_DIR: ./public
               commit_message: auto deploy
-
