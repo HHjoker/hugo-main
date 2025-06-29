@@ -7,16 +7,6 @@ title = 'Cpp'
 
 # Cpp Note
 
-## CMake 使用方法
-
-### 打印详细信息
-
-``` she
-make VERBOSE=1
-```
-
-
-
 ## GTest 使用方法
 
 [gtest官方文档](https://google.github.io/googletest/gmock_for_dummies.html)
