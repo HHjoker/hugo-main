@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "📋 Giscus App 安装指南"
+echo "========================"
+echo ""
+echo "1. 访问：https://github.com/apps/giscus"
+echo "2. 点击 'Install' 按钮"
+echo "3. 选择仓库：HHjoker/HHjoker.github.io"
+echo "4. 确认安装"
+echo ""
+echo "或者直接在浏览器打开："
+echo "https://github.com/apps/giscus/installations/select_target"
+echo ""
