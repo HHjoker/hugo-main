@@ -84,7 +84,7 @@ params:
 
     comments:
         enabled: true
-        provider: disqus
+        provider: giscus
 
         disqusjs:
             shortname:
@@ -142,18 +142,27 @@ params:
         cactus:
             defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
             serverName: "cactus.chat"
-            siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
+            siteName: ""
 
+        # Giscus 配置 - 基于 GitHub Discussions 的免费评论系统
+        # 配置步骤：
+        # 1. 在 https://github.com/HHjoker/HHjoker.github.io 启用 Discussions
+        # 2. 安装 Giscus App: https://github.com/apps/giscus
+        # 3. 访问 https://giscus.app/zh-CN 获取 repoID 和 categoryID
         giscus:
-            repo:
-            repoID:
-            category:
-            categoryID:
-            mapping:
-            lightTheme:
-            darkTheme:
+            repo: "HHjoker/HHjoker.github.io"
+            repoID: ""  # TODO: 从 giscus.app 获取并填写
+            category: "Announcements"
+            categoryID: ""  # TODO: 从 giscus.app 获取并填写
+            mapping: "pathname"
+            strict: 0
+            lightTheme: "preferred_color_scheme"
+            darkTheme: "preferred_color_scheme"
             reactionsEnabled: 1
             emitMetadata: 0
+            inputPosition: "bottom"
+            lang: "zh-CN"
+            loading: "lazy"
 
         gitalk:
             owner:
