@@ -94,7 +94,7 @@ Transformer 语言模型中存在两个反复出现的现象：
 
 研究发现 Massive Activations 遵循"上升 - 平台 - 下降"的三阶段生命周期：
 
-![Massive Activations 生命周期](massive_activations_lifecycle.png)
+![Massive Activations 生命周期](https://arxiv.org/html/2603.05498v1/assets/img/lifecycle.png)
 
 - **Step-up Blocks（上升块）**：1-2 个早期块注入极端值到隐藏表示中
 - **Residual Accumulation（残差累积）**：中间块通过残差连接传播这些值
@@ -118,7 +118,7 @@ Transformer 语言模型中存在两个反复出现的现象：
 - **高增益二次结构**：输出可表示为二次形式 `hᵀ U h`
 - **秩一主导**：Spike 通道的矩阵 Sₖ 由单个特征值 λ* 主导
 
-![Frobenius 范数分析](frobenius_norms.png)
+![Frobenius 范数分析](https://arxiv.org/html/2603.05498v1/assets/img/frobenius.png)
 
 Spike 通道对应于具有异常大 Frobenius 范数的坐标，这些高范数坐标仅出现在 step-up 和 step-down 块中。
 
@@ -265,7 +265,7 @@ WebChain 的核心创新是 **Triple Alignment**，同步三个层次的信息�
 | 平均轨迹长度 | 10.02 步 |
 | 设备类型 | 多 OS、多浏览器、多分辨率 |
 
-![WebChain 数据集概览](webchain_dataset_overview.png)
+![WebChain 数据集概览](https://arxiv.org/html/2603.05295v1/assets/img/dataset_overview.png)
 
 ##### 4. Dual Mid-Training 训练范式
 
@@ -279,7 +279,7 @@ WebChain 的核心创新是 **Triple Alignment**，同步三个层次的信息�
 
 ##### 实验 1：数据可扩展性分析
 
-![WebChain 规模效应](webchain_scaling_effects.png)
+![WebChain 规模效应](https://arxiv.org/html/2603.05295v1/assets/img/scaling_laws.png)
 
 在 Qwen2.5-VL-3B 上测试不同数据子集（4k、20k、全量 150k）的效果：
 - 数据量与 WCB-L 基准性能呈正相关
