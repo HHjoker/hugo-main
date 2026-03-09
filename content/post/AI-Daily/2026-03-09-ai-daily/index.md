@@ -1,5 +1,5 @@
 ---
-date: "2026-03-09T00:00:00Z"
+date: "2026-03-09T08:00:00+08:00"
 title: "AI 日报 | 2026-03-09"
 tags: ["AI", "LLM", "Agent", "Multimodal", "Research", "Reasoning", "WebAgent"]
 categories: ["AI Daily"]
