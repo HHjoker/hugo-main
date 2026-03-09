@@ -3,6 +3,7 @@ languageCode: zh-cn
 theme: hugo-theme-stack
 title: HH.s blog
 copyright: Huang Hao
+timeZone: Asia/Shanghai
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
