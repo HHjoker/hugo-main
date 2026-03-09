@@ -1,16 +1,82 @@
 {{ define "main" }}
-    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{/* 获取今天日期 */}}
+    {{ $today := now.Format "2006-01-02" }}
+    
+    {{/* 获取所有文章并按日期过滤 */}}
+    {{ $allPages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
     {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
-    {{ $filtered := ($pages | intersect $notHidden) }}
-    {{ $pag := .Paginate ($filtered) }}
+    {{ $filtered := ($allPages | intersect $notHidden) }}
+    
+    {{/* 按日期分组 */}}
+    {{ $todayPages := where $filtered ".Date.Format \"2006-01-02\"" "eq" $today }}
+    {{ $recentPages := where $filtered ".Date.Format \"2006-01-02\"" "lt" $today }}
+    
+    {{/* 获取分类列表 */}}
+    {{ $categories := .Site.Taxonomies.categories }}
 
     <section class="article-list">
-        {{ range $index, $element := $pag.Pages }}
-            {{ partial "article-list/default" . }}
+        {{/* 今日更新区域 */}}
+        {{ if gt (len $todayPages) 0 }}
+            <header>
+                <h3 class="section-title">📅 今日更新 ({{ len $todayPages }}篇)</h3>
+            </header>
+            {{ range $index, $element := $todayPages }}
+                {{ partial "article-list/default" . }}
+            {{ end }}
+        {{ else }}
+            <header>
+                <h3 class="section-title">📅 今日更新</h3>
+            </header>
+            <div class="article-list--empty">
+                <p>今天还没有更新，稍后再来看看吧~</p>
+            </div>
         {{ end }}
     </section>
 
-    {{- partial "pagination.html" . -}}
+    {{/* 分类聚合区域 */}}
+    <section class="categories-section">
+        <header>
+            <h3 class="section-title">📂 分类聚合</h3>
+        </header>
+        <div class="categories-grid">
+            {{ range $name, $taxonomy := $categories }}
+                {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
+                    <div class="category-card">
+                        <a href="{{ .Permalink }}">
+                            <h4>{{ .Title }}</h4>
+                            <span class="count">{{ len .Pages }} 篇</span>
+                        </a>
+                        {{/* 显示该分类下最新的 3 篇文章 */}}
+                        <ul class="latest-posts">
+                            {{ range first 3 .Pages.ByDate.Reverse }}
+                                <li>
+                                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                {{ end }}
+            {{ end }}
+        </div>
+    </section>
+
+    {{/* 历史文章链接 */}}
+    {{ if gt (len $recentPages) 0 }}
+        <section class="archive-section">
+            <header>
+                <h3 class="section-title">📚 历史文章 ({{ len $recentPages }}篇)</h3>
+            </header>
+            <div class="archive-links">
+                <a href="/archives/" class="archive-btn">查看全部归档</a>
+                {{ range $name, $taxonomy := $categories }}
+                    {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
+                        <a href="{{ .Permalink }}" class="archive-btn">{{ .Title }} ({{ len .Pages }})</a>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </section>
+    {{ end }}
+
     {{- partial "footer/footer" . -}}
 {{ end }}
 
