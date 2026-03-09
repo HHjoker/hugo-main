@@ -1,5 +1,5 @@
 {{ define "main" }}
-    {{/* 获取今天日期 */}}
+    {{/* 获取今天日期（北京时间） */}}
     {{ $today := now.Format "2006-01-02" }}
     
     {{/* 获取所有文章并按日期过滤 */}}
@@ -7,9 +7,10 @@
     {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
     {{ $filtered := ($allPages | intersect $notHidden) }}
     
-    {{/* 按日期分组 */}}
-    {{ $todayPages := where $filtered ".Date.Format \"2006-01-02\"" "eq" $today }}
-    {{ $recentPages := where $filtered ".Date.Format \"2006-01-02\"" "lt" $today }}
+    {{/* 按日期分组 - 使用 time.As 转换到同一时区比较 */}}
+    {{ $todayPages := where $filtered ".Date" "ge" (now.AddDate 0 0 -1) }}
+    {{ $todayPages = where $todayPages ".Date" "lt" (now.AddDate 0 0 1) }}
+    {{ $recentPages := where $filtered ".Date" "lt" (now.AddDate 0 0 -1) }}
     
     {{/* 获取分类列表 */}}
     {{ $categories := .Site.Taxonomies.categories }}
