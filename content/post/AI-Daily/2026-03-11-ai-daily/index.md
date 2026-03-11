@@ -56,7 +56,7 @@ Hugging Face 发布 LeRobot 框架 v0.5.0，这是迄今为止最大规模的更
 
 ![LeRobot Unitree G1 人形机器人](lerobot_g1_humanoid.jpg)
 
-![LeRobot SARM 阶段感知奖励建模](lerobot_sarm.gif)
+*LeRobot v0.5.0 新增 SARM 阶段感知奖励建模，解决长程任务学习难题*
 
 ### 2. 强化学习训练库对比分析
 
