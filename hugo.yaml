@@ -275,3 +275,6 @@ frontmatter:
         - :fileModTime
 # 允许获取git信息
 enableGitInfo: true
+
+# 增加构建超时时间，防止大图片/复杂模板导致超时
+timeout: 120s
