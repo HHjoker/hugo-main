@@ -79,7 +79,7 @@ NVIDIA 联合 Johns Hopkins、TUM、CMR Surgical 等 35 家机构发起 **Open-H
 
 #### 数据集规模与组成
 
-![Open-H-Embodiment 样本数据](open-h-embodiment-sample.png)
+
 
 - **778 小时** 训练数据，CC-BY-4.0 许可
 - 覆盖模拟训练、台架练习（如缝合）和真实临床手术
@@ -294,7 +294,7 @@ SARM (Stage-Aware Reward Modeling) 解决长程任务学习难题：
 
 #### 核心方法
 
-![PhysMoDPO 概述](physmodpo-teaser.png)
+
 
 PhysMoDPO 提出物理引导的后训练框架：
 1. 对每个条件，随机采样 K 个候选运动

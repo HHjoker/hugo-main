@@ -87,7 +87,7 @@ Transformer 语言模型中存在着两个反复出现的现象：
 
 **1. 归一化是连接两个现象的关键架构组件**
 
-![大规模激活的生命周期](spike_activation_lifecycle.png)
+
 
 *图 1：大规模激活在 Llama 2 7B 和 Qwen3 8B 中随深度的变化。早期模块注入大规模激活，通过网络大部分区域持续存在，最后被晚期模块中和。*
 
@@ -98,7 +98,7 @@ Transformer 语言模型中存在着两个反复出现的现象：
 
 **2. 前馈块作为方向性二次放大器**
 
-![二次型范数分析](quadratic_form_norms.png)
+
 
 *图 2：Llama 2 7B 中二次型的 Frobenius 范数。尖峰通道对应具有显著更大范数的 U_k 矩阵。*
 
@@ -213,7 +213,7 @@ Stage 3: 后处理上下文增强
 
 **数据集统计**
 
-![WebChain 数据集概览](webchain_dataset_overview.png)
+
 
 *图 1：WebChain 统计摘要，包括跨网站类别的交互分布、顶级域名交互频率、轨迹复杂度等*
 
@@ -227,7 +227,7 @@ Stage 3: 后处理上下文增强
 
 **缩放效应分析**
 
-![数据缩放效应](scaling_effects.png)
+
 
 *图 2：WebChain 子集（4K、20K、Full）对 Qwen2.5-VL-3B 在 LCRL 后训练后的成功率影响*
 

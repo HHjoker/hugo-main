@@ -54,7 +54,7 @@ Snowflake 的 Ulysses 序列并行（ALST 协议的一部分）现已集成到 H
 核心挑战在于：如何系统性地生成针对特定编程概念的高质量训练数据？传统方法依赖于爬取互联网代码，但难以控制概念分布、难度梯度和多样性。
 
 #### 核心方法与技术细节
-![Code Concepts 工作流程](code-concepts-workflow.png)
+
 
 工作流程的核心是从大规模标注的 Nemotron-Pretraining-Code-{v1,v2} 数据集中提取的编程知识分类体系。该分类体系编码了数千个分层组织的编程概念，从基本结构（如字符串、递归）到高级算法和数据结构模式。
 
@@ -64,7 +64,7 @@ Snowflake 的 Ulysses 序列并行（ALST 协议的一部分）现已集成到 H
 3. **数据生成**：使用 GPT-OSS 120B 生成约 1500 万个合成 Python 编程问题
 4. **质量验证**：使用 Python 的 ast.parse 函数验证生成的代码可执行
 
-![问题生成过程](code-concepts-results.png)
+
 
 #### 实验设计与结果
 将 10B token 的 Code Concepts 数据纳入 Nemotron-Nano-v3 最后 100B token 预训练中进行数据消融实验：
@@ -199,7 +199,7 @@ IBM 发布了 Granite 4.0 1B Speech，专为资源受限设备上的企业应用
 - **推理优化**：通过推测解码实现更快的推理
 
 #### 实验设计与结果
-![WER 性能对比](granite-speech-wer.png)
+
 
 在标准英语 ASR 基准上使用词错误率（WER）评估，Granite 4.0 1B Speech 在多个数据集上实现了具有竞争力的低 WER，同时参数量远少于许多可比模型。该模型最近在 OpenASR 排行榜上排名第 1。
 

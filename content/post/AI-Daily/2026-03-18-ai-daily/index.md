@@ -70,7 +70,7 @@ Hugging Face LeRobot 迎来迄今为止最大更新，超过 200 个 PR 和 50 �
 
 **1. Nemotron Elastic 压缩框架**
 
-![Nemotron Elastic 架构](nemotron_elastic_architecture.png)
+
 
 Nemotron 3 Nano 4B 通过 Nemotron Elastic 框架从 Nemotron Nano 9B v2 压缩而来。与传统剪枝方法不同，Nemotron Elastic 使用端到端训练的路由器进行神经架构搜索：
 
@@ -96,7 +96,7 @@ Nemotron 3 Nano 4B 通过 Nemotron Elastic 框架从 Nemotron Nano 9B v2 压缩�
 
 #### 实验设计与结果
 
-![Orak 游戏智能基准测试结果](nemotron_orak_benchmark.png)
+
 
 **关键性能指标**：
 
@@ -145,7 +145,7 @@ Nemotron 3 Nano 4B 为边缘 AI 树立了新标准，预计将推动：
 
 **1. 混合 SSM 架构的高吞吐量推理**
 
-![Holotron-12B 架构](holotron_architecture.png)
+
 
 Holotron-12B 基于 NVIDIA Nemotron-Nano-12B-v2-VL 架构，采用混合状态空间模型 (SSM) 和注意力机制：
 
@@ -214,7 +214,7 @@ OpenSeeker 旨在填补这一空白，成为首个**完全开源**（模型 + �
 
 **1. 事实基础的可扩展可控 QA 合成**
 
-![OpenSeeker QA 合成流程](https://arxiv.org/html/2603.15594v1/x1.png)
+
 
 核心思想是"逆向工程"推理图：
 

@@ -103,7 +103,7 @@ draft: false
 
 **1. 注意力探针（Attention Probes）**
 
-![推理剧场方法概览](reasoning_theater_figure1.png)
+
 
 *图 1：三种早期解码方法对比。注意力探针在层激活上训练，强制回答在中间 token 注入提示，CoT 监控器分析推理前缀文本。*
 
@@ -147,7 +147,7 @@ z = Wv · H(ℓ) · softmax(Wq · H(ℓ))
 
 MMLU 的表演性率远高于 GPQA-D，表明简单任务上模型更早确定答案。
 
-![三种方法准确率对比](reasoning_theater_figure2.png)
+
 
 *图 2：MMLU（左）上探针和强制回答早期准确率远高于 CoT 监控器，表明表演性推理；GPQA-D（右）上三者同步增长，表明真实推理。*
 
@@ -176,7 +176,7 @@ MMLU 的表演性率远高于 GPQA-D，表明简单任务上模型更早确定�
 
 **5. 早停应用：80% token 节省**
 
-![早停效果](reasoning_theater_early_exit.png)
+
 
 *图 7：注意力探针校准曲线（左）接近完美校准；早停准确率与 token 节省（右）显示 95% 置信度下节省 80% token 同时保持 97% 准确率。*
 
@@ -240,7 +240,7 @@ WebChain 的核心创新是三层精确对齐：
 
 这种多模态监督使模型不仅能"看到"页面，还能理解每个像素背后的结构逻辑。
 
-![WebChain 数据集概览](webchain_figure1.png)
+
 
 *图 1：WebChain 统计摘要，包括跨网站类别的交互分布、顶级域名交互频率、轨迹复杂度等*
 
@@ -282,7 +282,7 @@ Stage 3: 后处理上下文增强
 
 **缩放效应分析**
 
-![数据缩放效应](webchain_scaling.png)
+
 
 *图 3：WebChain 子集（4K、20K、Full）对 Qwen2.5-VL-3B 在 LCRL 后训练后的成功率影响*
 

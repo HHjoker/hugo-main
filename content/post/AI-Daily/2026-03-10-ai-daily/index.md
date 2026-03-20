@@ -77,7 +77,7 @@ IBM 发布 Granite 4.0 1B Speech，仅 1B 参数却登榜 **OpenASR Leaderboard 
 - **新功能**：日语 ASR、关键词列表偏置（改进名称与首字母缩写识别）
 - **开源**：Apache 2.0 许可，原生支持 transformers 与 vLLM
 
-![Granite 4.0 1B Speech 性能对比](granite-speech-performance.png)
+
 
 *Granite 4.0 1B Speech 在多个基准上实现竞争性 WER，同时保持极小参数量*
 
@@ -119,7 +119,7 @@ BEVLM 框架包含两个核心贡献：
 - **I_UniAD**：UniAD 图像 backbone 在 BEV 融合前的 token
 - **B_UniAD**：UniAD 在 BEV 融合后产生的 BEV token
 
-![BEVLM 表示对比](bevlm-figure1-representation.png)
+
 
 *图 1：三种视觉表示对比。左：视觉编码器独立处理多视角图像；中：BEV 编码器提供空间一致表示但语义有限；右（本文）：通过语义蒸馏构建语义增强且空间一致的场景表示*
 
@@ -130,7 +130,7 @@ BEVLM 框架包含两个核心贡献：
 
 **2. 语义蒸馏：从 LLM 到 BEV 编码器的知识迁移**
 
-![BEVLM 语义蒸馏框架](bevlm-figure3-distillation.png)
+
 
 *图 3：BEV 语义蒸馏框架。使用共享 BEV 表示同时支持 VQA 和目标检测任务，通过 VQA 任务从 LLM 蒸馏语义知识，同时用检测任务正则化 BEV 空间结构*
 
@@ -167,7 +167,7 @@ $$\mathcal{L}_{\text{distill}} \approx \|\text{MLP}(E_\theta(\mathcal{X})) - \ma
 - **教师模型规模效应**：8B LLM 蒸馏优于 1B LLM（+10.2% NeuroNCAP 评分）
 - **VQA 数据类型**：Behavior 和 Planning 问题对安全提升贡献最大
 
-![BEVLM 封闭环定性结果](bevlm-figure4-results.png)
+
 
 *图 4：NeuroNCAP 封闭环定性结果。蒸馏模型在安全关键场景（右转冲突、对向车道入侵）中展现更优决策，成功避免碰撞而 baseline 失败*
 
@@ -215,7 +215,7 @@ $$\mathcal{L}_{\text{distill}} \approx \|\text{MLP}(E_\theta(\mathcal{X})) - \ma
 - **对话权威**：解释意图、提出候选动作、询问澄清问题、解释选择
 - **执行权威**：仅通过满足明确机器可读约束的动作选择和运行计算
 
-![Schema-Gated 架构设计空间](schema-gated-figure2-design-space.png)
+
 
 *图 2：对话式科学工作流架构设计空间。20 个系统在 ED（执行确定性）/CF（对话灵活性）空间中的位置，虚线为经验 Pareto 前沿，Schema-Gated 区域（ED≥3.5, CF≥3.5）仅有 2 个系统*
 
@@ -227,7 +227,7 @@ $$\mathcal{L}_{\text{distill}} \approx \|\text{MLP}(E_\theta(\mathcal{X})) - \ma
 
 3. **从工具级到工作流级 gating**：工具级 schema 验证（OpenAI function calling、Anthropic tool use、MCP）已主流但仅适用于单个调用；Schema-Gated Orchestration 将验证扩展到组合工作流，在执行前对整个多步计划强制执行结构、依赖和类型约束
 
-![Schema-Gated 参考架构](schema-gated-figure3-architecture.png)
+
 
 *图 3：分离对话权威与执行权威的参考架构。LLM 编排器持有对话权威，执行权威存在于 schema 验证中，每个动作提案在执行前必须通过执行权威 gate*
 
