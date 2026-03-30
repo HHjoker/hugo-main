@@ -277,4 +277,4 @@ frontmatter:
 enableGitInfo: true
 
 # 增加构建超时时间，防止大图片/复杂模板导致超时
-timeout: 120s
+timeout: 180s
