@@ -10,8 +10,8 @@
     <!-- Page description exists -->
     {{ $description = .Description }}
 {{ else if .IsPage }}
-    <!-- Use page summary -->
-    {{ $description = .Summary }}
+    <!-- Use page summary (truncated to avoid recursion/timeout) -->
+    {{ $description = .Summary | truncate 160 "..." | plainify }}
 {{ end }}
 
-{{ return (replaceRE "\n" " " $description | plainify) }}
+{{ return (replaceRE "\n" " " $description) }}
