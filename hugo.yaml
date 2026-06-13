@@ -18,22 +18,21 @@ hasCJKLanguage: true
 
 languages:
     en:
-        label: English
+        languageName: English
         title: HH Blog
         weight: 1
         params:
             sidebar:
                 subtitle: welcome my blog
     zh-cn:
-        label: 中文
+        languageName: 中文
         title: HH Blog
         weight: 2
         params:
             sidebar: 
                 subtitle: 欢迎来到我的博客
     ar:
-        label: عربي
-        direction: rtl
+        languageName: عربي
         title: موقع تجريبي
         weight: 3
         params:
