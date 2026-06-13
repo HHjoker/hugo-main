@@ -3,7 +3,7 @@ date = '2026-03-05T21:30:00+08:00'
 draft = false
 title = 'Rust 重构实战项目推荐：从 C++ 到 Rust'
 tags = ['Rust', '项目推荐', '代码重构', 'C++', '开源项目']
-categories = ['rust-daily']
+categories = ['Rust 每日学习']
 +++
 
 ## 📌 项目背景

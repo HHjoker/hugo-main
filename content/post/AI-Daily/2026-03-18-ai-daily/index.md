@@ -2,7 +2,7 @@
 date: 2026-03-18T00:00:00Z
 title: "AI 日报 | 2026-03-18: NVIDIA Nemotron 3 Nano 4B 发布，Holotron-12B 智能体突破，LeRobot v0.5.0 重大更新"
 tags: ["AI", "LLM", "多模态", "机器人", "Agent", "NVIDIA", "开源"]
-categories: ["AI 日报", "大模型", "机器人学习"]
+categories: ["AI Daily"]
 draft: false
 ---
 

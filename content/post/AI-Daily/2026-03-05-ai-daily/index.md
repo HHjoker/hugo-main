@@ -3,7 +3,7 @@ date = '2026-03-05T08:00:00+08:00'
 draft = false
 title = 'AI 日报 | 2026-03-05：Agent 目标漂移深度研究、24 小时文生图训练突破'
 tags = ['AI Daily', '大模型', '多模态', 'Agent', '论文解读', '具身智能']
-categories = ['AI-Daily']
+categories = ['AI Daily']
 +++
 
 ## 📌 今日总结

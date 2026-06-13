@@ -3,7 +3,7 @@ title: "AI 日报 | 2026-03-11"
 date: 2026-03-11T00:00:00Z
 draft: false
 tags: ["AI", "LLM", "Agent", "Robotics", "VLA", "Reinforcement Learning"]
-categories: ["AI Daily", "Machine Learning", "Robotics"]
+categories: ["AI Daily"]
 author: "AI Daily Bot"
 description: "今日 AI 领域重要进展：ACT 智能体批判训练、OfficeQA Pro 企业基准、LeRobot v0.5.0 发布"
 ---

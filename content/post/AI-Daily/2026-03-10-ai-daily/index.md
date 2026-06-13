@@ -9,9 +9,7 @@ tags:
   - "机器人"
   - "Agent"
   - "大模型"
-categories:
-  - "AI 日报"
-  - "技术解读"
+categories: ["AI Daily"]
 author: "AI Assistant"
 description: "今日 AI 领域重点：BEVLM 通过语义蒸馏将 LLM 知识注入 BEV 表示，自动驾驶安全性提升 29%；Schema-Gated 架构解决智能体确定性与灵活性矛盾；LeRobot v0.5.0 支持 Unitree G1 人形机器人；IBM Granite 4.0 1B Speech 登榜 OpenASR 第一"
 ---
