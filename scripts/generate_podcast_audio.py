@@ -25,7 +25,7 @@ from pathlib import Path
 
 DEFAULT_BASE_URL = "https://token-plan-cn.xiaomimimo.com/v1"
 DEFAULT_MODEL = "mimo-v2.5-tts"
-DEFAULT_VOICE = "苏打"
+DEFAULT_VOICE = "茉莉"
 DEFAULT_STYLE = (
     "请使用自然、清晰、有洞察力的中文播客主持人口吻朗读。语速适中，"
     "不要播音腔，不要夸张表演；段落之间自然停顿，重点句稍微放慢。"
