@@ -1,4 +1,26 @@
 <section class="article-content">
+    {{- with .Params.audio -}}
+        {{- $audioURL := . -}}
+        {{- with $.Resources.GetMatch . -}}
+            {{- $audioURL = .RelPermalink -}}
+        {{- end -}}
+        <aside class="article-audio" aria-label="文章语音版">
+            <div class="article-audio__heading">
+                <span class="article-audio__icon" aria-hidden="true">▶</span>
+                <div>
+                    <strong>收听本期语音版</strong>
+                    <p>适合通勤、散步或闭眼休息时收听</p>
+                </div>
+            </div>
+            <audio controls preload="metadata" src="{{ $audioURL | safeURL }}">
+                您的浏览器暂不支持音频播放，请<a href="{{ $audioURL | safeURL }}">下载音频</a>收听。
+            </audio>
+            <p class="article-audio__disclosure">
+                本音频由 AI 语音合成{{ with $.Params.audio_model }}（{{ . }}）{{ end }}，内容与文章正文一致。
+            </p>
+        </aside>
+    {{- end -}}
+
     <!-- Refer to https://discourse.gohugo.io/t/responsive-tables-in-markdown/10639/5 -->
     {{ $wrappedTable := printf "<div class=\"table-wrapper\">${1}</div>" }}
     {{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | safeHTML }}

@@ -13,6 +13,64 @@
     --blockquote-background-color: #f5f7ff;
     --shadow-l1: 0 2px 12px rgba(74, 108, 247, 0.08);
     --shadow-l2: 0 8px 24px rgba(74, 108, 247, 0.12);
+  }
+
+/* ========== 文章语音播放器 ========== */
+.article-audio {
+    margin: 0 0 2rem;
+    padding: 1.25rem;
+    border: 1px solid var(--card-separator-color);
+    border-radius: 14px;
+    background:
+        radial-gradient(circle at top right, rgba(52, 152, 219, 0.14), transparent 42%),
+        var(--card-background);
+    box-shadow: var(--shadow-l1);
+}
+
+.article-audio__heading {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+
+    strong {
+        display: block;
+        color: var(--body-text-color);
+        font-size: 1.05rem;
+    }
+
+    p {
+        margin: 0.2rem 0 0;
+        color: var(--card-text-color-secondary);
+        font-size: 0.85rem;
+    }
+}
+
+.article-audio__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: #fff;
+    font-size: 0.9rem;
+    padding-left: 0.15rem;
+}
+
+.article-audio audio {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+}
+
+.article-audio__disclosure {
+    margin: 0.75rem 0 0;
+    color: var(--card-text-color-secondary);
+    font-size: 0.78rem;
+    line-height: 1.5;
 }
 
 [data-scheme="dark"] {
